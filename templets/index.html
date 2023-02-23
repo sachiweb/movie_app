@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+   {% block body %}
+
+
+   <div class="head">
+    <h2>LATEST MOVIES</h2>
+    <p class="text-right"><a href="latest">See all</a></p>
+  </div>
+         {% for n in adddata %}
+        
+         <div class="movie">
+          <div class="movie-image"> 
+            <span class="play"><span class="name">
+            
+              <a href="/about/{{n.title}}"> {{n.title}}</a>
+
+            </span></span> 
+            <a href="about.html"><img src="{{n.image.url}}" alt="" /></a>
+           </div>
+          <div class="rating">
+            <p>RATING</p>
+           
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+
+        {% endfor %}
+        
+
+        
+   <div class="head">
+    <h2>MOST WATCH</h2>
+    <p class="text-right"><a href="most">See all</a></p>
+  </div>
+        {% for n in mostdata %}
+        <div class="movie">
+          <div class="movie-image"> 
+            <span class="play"><span class="name">
+              <a href="/about/{{n.title}}"> {{n.title}}</a>
+            </span></span> 
+            <a href="about"><img src="{{n.image.url}}" alt="" /></a>
+           </div>
+          <div class="rating">
+            <p>RATING</p>
+           
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        {% endfor %}
+
+        <div class="head">
+          <h2>TOP RATED</h2>
+          <p class="text-right"><a href="toprate">See all</a></p>
+        </div>
+              {% for n in topdata %}
+              <div class="movie">
+                <div class="movie-image"> 
+                  <span class="play"><span class="name">
+
+                      <a href="/about/{{n.title}}"> {{n.title}}</a>
+                    
+
+                  </span></span> 
+                  <a href="about"><img src="{{n.image.url}}" alt="" /></a>
+                 </div>
+                <div class="rating">
+                  <p>RATING</p>
+                 
+                  <div class="stars">
+                    <div class="stars-in"> </div>
+                  </div>
+                  <span class="comments">12</span> </div>
+              </div>
+              {% endfor %}
+{% endblock body %}
+
+
+       

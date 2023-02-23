@@ -1,0 +1,21 @@
+{% include 'head.html' %}
+
+{% for n in moviedata %}
+         
+         <div class="movie">
+          <div class="movie-image"> 
+            <span class="play"><span class="name">
+              <a href="/about/{{n.title}}"> {{n.title}}</a>
+            </span></span> 
+            <a href="about.html"><img src="{{n.image.url}}" alt="" /></a>
+           </div>
+          <div class="rating">
+            <p>RATING</p>
+           
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+
+        {% endfor %}
